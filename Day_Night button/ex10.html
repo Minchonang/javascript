@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>object</h1>
+
+        <input type="button" value="새로고침" onclick="
+        window.location.reload();
+        ">
+
+        <h2>Create</h2>
+        <script>
+            var team = {
+                "a": "alpha",
+                "b": "beta",
+                "g": "gamma"
+            };
+            document.write("a: " + team.a + "<br>");
+            document.write("b: " + team.b + "<br>");
+            team.d = "delta";
+            document.write("d: " + team.d + "<br>");
+            team["t"] = "theta";
+            document.write("t: " + team["t"] + "<br>");
+        </script>
+        <h2>Iterate</h2>
+        <script>
+            for(var key in team){
+                document.write(key + ': ' + team[key] + "<br>");
+            }
+        </script>
+        <h2>Property & Method</h2>
+        <script>
+            team.showAll = function(){
+                for(var key in this){
+                    document.write(key + ': ' + this[key] + "<br>");
+                }
+            }
+            team.showAll();
+        </script>
+    </body>
+</html>

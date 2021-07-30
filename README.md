@@ -1,1 +1,1 @@
-# javascript
+studying javascript
